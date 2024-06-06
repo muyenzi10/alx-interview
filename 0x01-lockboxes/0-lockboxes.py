@@ -13,10 +13,10 @@ def canUnlockAll(boxes):
     elif (len(boxes)) == 0:
         return False
 
-    for k in range(1, len(boxes) - 1):
+    for i in range(1, len(boxes) - 1):
         boxes_checked = False
         for idx in range(len(boxes)):
-            boxes_checked = k in boxes[idx] and k != idx
+            boxes_checked = i in boxes[idx] and i != idx
             if boxes_checked:
                 break
         if boxes_checked is False:
